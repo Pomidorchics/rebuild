@@ -1,0 +1,140 @@
+.portfolio {
+  padding-top: 10px;
+  background-color: #132524;
+}
+
+.portfolio-title {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: #ffff;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.container {
+  max-width: auto;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.portfolio-item {
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 350px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 246px;
+}
+
+.portfolio-text {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #c09532;
+  font-family: 'Inter', sans-serif;
+}
+
+.portfolio-text h3 {
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.portfolio-text p {
+  font-size: 16px;
+  text-align: center;
+  max-width: 487px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.portfolio-image {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0), 0 0 10px rgba(0, 0, 0);
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-content {
+  direction: ltr; 
+}
+
+.portfolio-item:nth-child(odd) .portfolio-text {
+  order: 1;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-image {
+  order: 2;
+}
+
+.portfolio-item:nth-child(even) .portfolio-content {
+  direction: rtl;
+}
+
+.portfolio-item:nth-child(even) .portfolio-content > * {
+  direction: ltr; 
+}
+
+.portfolio-item:nth-child(even) .portfolio-text {
+  order: 2;
+}
+
+.portfolio-item:nth-child(even) .portfolio-image {
+  order: 1;
+}
+
+.portfolio-content {
+  display: flex;
+  gap: 246px;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-content {
+  flex-direction: row;
+}
+
+.portfolio-item:nth-child(even) .portfolio-content {
+  flex-direction: row-reverse;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-image {
+  border-radius: 175px 0 0 175px; 
+}
+
+.portfolio-item:nth-child(even) .portfolio-image {
+  border-radius: 0 175px 175px 0; 
+}
+
+.portfolio-text {
+  flex: 1;
+}
+
+.portfolio-image {
+  flex: 1;
+}
