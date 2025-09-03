@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Block1 from './components/Block1';
 import reportWebVitals from './reportWebVitals';
 import Block2 from './components/Block2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Block1/>
     <Block2 />
   </React.StrictMode>
 );
