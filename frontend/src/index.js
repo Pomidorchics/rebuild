@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import Block2 from './components/Block2'
 import Header from './components/Header';
 import BusinessCard from './components/Block7';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+
     <main>
       <Block1/>
 
@@ -18,6 +20,8 @@ root.render(
 
       <BusinessCard />
     </main>
+
+    <Footer />
   </React.StrictMode>
 );
 
