@@ -1,0 +1,75 @@
+/* components/BusinessCard.css */
+.business-card-section {
+  padding: 80px 0;
+  background-color: #132524;
+}
+
+.business-card-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.business-card-title {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 40px;
+  color: #ffff;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.business-card-container {
+  cursor: pointer;
+  width: 887px;
+  height: 493px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.business-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.business-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.business-card-container:hover .business-card:not(.flipped) {
+  transform: translateY(-5px);
+}

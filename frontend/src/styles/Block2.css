@@ -4,6 +4,8 @@
 }
 
 .portfolio-title {
+  text-transform: uppercase;
+  font-weight: normal;
   text-align: center;
   font-size: 24px;
   margin-top: 24px;

@@ -5,15 +5,19 @@ import Block1 from './components/Block1';
 import reportWebVitals from './reportWebVitals';
 import Block2 from './components/Block2'
 import Header from './components/Header';
+import BusinessCard from './components/Block7';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <main>
+      <Block1/>
 
-    <Block1/>
+      <Block2 />
 
-    <Block2 />
+      <BusinessCard />
+    </main>
   </React.StrictMode>
 );
 
