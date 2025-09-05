@@ -49,7 +49,7 @@ function Block3() {
   
   return (
     <section className="block3-section" id="services">
-      <h2 className="services-title">Услуги</h2>
+      <h2 className="section-title">Услуги</h2>
       <div className="services-grid">
         {ServicesItems.map((service) => (
           <div key={service.id} className="service-item">
