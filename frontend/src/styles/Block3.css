@@ -2,7 +2,7 @@
   background-color: #132524;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.2em;
 }

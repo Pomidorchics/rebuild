@@ -13,11 +13,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <main>
-      <Block1/>
     <main className="main-content">
       <Block1 />
       <Block2 />
+      <Block3 />
       <BusinessCard />
     </main>
     <Footer />
