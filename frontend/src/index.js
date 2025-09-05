@@ -6,17 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import Block2 from './components/Block2'
 import Block3 from './components/Block3'
 import Header from './components/Header';
+import BusinessCard from './components/Block7';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-
-    <Block1/>
-
-    <Block2 />
-
-    <Block3 />
+    <main className="main-content">
+      <Block1 />
+      <Block2 />
+      <BusinessCard />
+    </main>
   </React.StrictMode>
 );
 
