@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-content {
+  margin-top: 80px; /* Высота хедера */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-top: 45px;
+  }
+}

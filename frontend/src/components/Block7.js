@@ -12,11 +12,9 @@ const BusinessCard = () => {
   };
 
   return (
-    <section className="business-card-section">
+    <section className="business-card-section" id="contacts">
       <div className="container">
-        <h2 className="business-card-title">
-          Наша визитка
-        </h2>
+        <h2 className="business-card-title">Наша визитка</h2>
         <div className="business-card-container" onClick={handleCardClick}>
           <div className={`business-card ${isFlipped ? "flipped" : ""}`}>
             <div className="card-side card-front">
