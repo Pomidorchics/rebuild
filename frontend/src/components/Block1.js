@@ -6,7 +6,7 @@ import "../styles/Block1.css";
 function Block1() {
   // Возвращаем JSX - разметку нашего блока
   return (
-    <section className="block1-section">
+    <section className="block1-section" id="about">
       <div className="block1-content">
         <h1 className="block1-title">REBUILD YOUR FUTURE</h1>
         <p className="block1-text">
