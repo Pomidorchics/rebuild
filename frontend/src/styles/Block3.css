@@ -1,0 +1,188 @@
+.block3-section {
+  background-color: #132524;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #ffff;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+  padding-top: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  margin: auto 0;
+  padding: 20px 0;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.service-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Нечетные элементы - выравниваем влево */
+.service-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+/* Четные элементы - выравниваем вправо */
+.service-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.service-image-container {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+/* Скругления для нечетных элементов (справа) */
+.service-item:nth-child(odd) .service-image-container {
+  border-radius: 0 175px 175px 0;
+}
+
+/* Скругления для четных элементов (слева) */
+.service-item:nth-child(even) .service-image-container {
+  border-radius: 175px 0 0 175px;
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  max-width: 350px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+}
+
+/* Скругления overlay должны повторять скругления изображения */
+.service-item:nth-child(odd) .service-overlay {
+  border-radius: 0 175px 175px 0;
+  left: 250px;
+}
+
+.service-item:nth-child(even) .service-overlay {
+  border-radius: 175px 0 0 175px;
+}
+
+.service-image-container:hover .service-overlay {
+  opacity: 1;
+}
+
+.service-image-container:hover .service-image {
+  transform: scale(1.05);
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.service-description {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 300px;
+}
+
+.service-button {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FBCA38;
+    padding: 16px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border: none;
+}
+
+.service-button:hover {
+    box-shadow: 4px 4px 5px black;
+    transform: translateY(-2px);
+}
+
+.service-button:active{
+    box-shadow: 4px 4px 5px black;
+    transform: translateY(-2px);
+    background-color: #fce7aa;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .service-item:nth-child(odd),
+  .service-item:nth-child(even) {
+    justify-content: center;
+  }
+  
+  .service-image-container {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  
+  .service-item:nth-child(odd) .service-image-container,
+  .service-item:nth-child(even) .service-image-container {
+    border-radius: 20px;
+  }
+  
+  .service-item:nth-child(odd) .service-overlay,
+  .service-item:nth-child(even) .service-overlay {
+    border-radius: 20px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+  }
+}
