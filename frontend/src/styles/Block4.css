@@ -1,0 +1,286 @@
+.carousel-section {
+  padding: 80px 20px;
+  background-color: #132524;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.carousel-main-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: white;
+}
+
+/* Заголовок с кнопками */
+.carousel-subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.carousel-room-title {
+  font-size: 20px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  min-width: 200px;
+}
+
+.carousel-subheader .carousel-button {
+  background-color: #FBCA38;
+  border: none;
+  color: #000000;
+  width: 50px;
+  height: 30px;
+  font-size: 24px;
+}
+
+.carousel-subheader .carousel-button:hover {
+  box-shadow: 4px 4px 5px black;
+  transform: translateY(-2px);
+}
+
+.carousel-subheader .carousel-button:active {
+  box-shadow: 4px 4px 5px black;
+  transform: translateY(-2px);
+  background-color: #fce7aa;
+}
+
+.carousel-button-prev {
+  left: 20px;
+  border-radius: 100% 0 0 100%;
+}
+
+.carousel-button-next {
+  right: 20px;
+  border-radius: 0 100% 100% 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 500px;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  border: #0a0a0a;
+}
+
+.carousel-button-prev {
+  left: 20px;
+}
+
+.carousel-button-next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #FBCA38;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hotspot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FBCA38;
+  border-radius: 50%;
+  background: rgba(251, 202, 56, 0.2);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hotspot:hover {
+  background: rgba(251, 202, 56, 0.4);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hotspot.active {
+  background: #FBCA38;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.hotspot-icon {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.hotspot.active .hotspot-icon {
+  transform: rotate(45deg); /* превращаем + в × */
+}
+
+/* Аннотации */
+.annotation {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.annotation.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.annotation-line {
+  position: absolute;
+  background: #FBCA38;
+  width: 0;
+  height: 2px;
+  transition: width 0.5s ease 0.2s;
+}
+
+.annotation-wall .annotation-line {
+  transform-origin: left center;
+  right: 0;
+}
+
+.annotation-ceiling .annotation-line {
+  transform-origin: right center;
+  left: 0;
+}
+
+.annotation-floor .annotation-line {
+  transform-origin: right center;
+  left: 0;
+}
+
+.annotation.active .annotation-line {
+  width: 300px;
+}
+
+/* Анимация появления */
+@keyframes drawLine {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 300px;
+  }
+}
+
+.annotation.active .annotation-line {
+  animation: drawLine 0.5s ease forwards;
+}
+
+.annotation-content {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #FBCA38;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+  z-index: 30;
+}
+
+.annotation-content h3 {
+  color: #FBCA38;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.annotation-content p {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Позиционирование для разных типов точек */
+.annotation-wall .annotation-content {
+  right: 300px; /* ширина линии + отступ */
+  top: 50%;
+  transform: translateY(-50%) translateX(20px);
+}
+
+/* Позиционирование для потолка и пола - справа от линии */
+.annotation-ceiling .annotation-content,
+.annotation-floor .annotation-content {
+  left: 300px; /* ширина линии + отступ */
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+}
+
+.annotation.active .annotation-content {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  transition: all 0.3s ease 0.5s;
+}
+
+/* Адаптивность */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+@media (max-width: 599px) {
+
+}
