@@ -32,7 +32,7 @@ function Block4() {
           title: "Lorem ipsum",
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
           x: 50,
-          y: 2
+          y: 15
         },
         {
           id: 3,
@@ -63,7 +63,7 @@ function Block4() {
           title: "Lorem ipsum",
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
           x: 50,
-          y: 2
+          y: 15
         },
         {
           id: 3,
@@ -94,7 +94,7 @@ function Block4() {
           title: "Lorem ipsum",
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
           x: 50,
-          y: 2
+          y: 15
         },
         {
           id: 3,
@@ -126,7 +126,7 @@ function Block4() {
           title: "Lorem ipsum",
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
           x: 50,
-          y: 2
+          y: 15
         },
         {
           id: 3,
@@ -206,10 +206,7 @@ function Block4() {
                       className={`hotspot hotspot-${point.type} ${
                         activePoint === point.id ? 'active' : ''
                       }`}
-                      style={{
-                        left: `${point.x}%`,
-                        top: `${point.y}%`
-                      }}
+
                       onClick={() => handlePointClick(point)}
                       aria-label={point.title}
                     >
@@ -219,11 +216,7 @@ function Block4() {
                     {/* Линия и текст */}
                     <div className={`annotation annotation-${point.type} ${
                       activePoint === point.id ? 'active' : ''
-                    }`}
-                    style={{
-                      left: `${point.x}%`,
-                      top: `${point.y}%`
-                    }}>
+                    }`}>
                       <div className="annotation-line"></div>
                       <div className="annotation-content">
                         <h4>{point.title}</h4>
