@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import "../styles/Block1.css";
+import specification1 from "../assets/briefcase.png";
+import specification2 from "../assets/man_with_stars.png";
+import specification3 from "../assets/document.png";
+import specification4 from "../assets/free.png";
 
 // Создаем функциональный компонент
 // Имя компонента всегда с большой буквы!
 function Block1() {
+  const specifications = [
+    {
+      id: 1,
+      image: specification1,
+      description: "ГАРАНТИЯ РАБОТЫ",
+    },
+    {
+      id: 2,
+      image: specification2,
+      description: "ОПЫТНАЯ БРИГАДА",
+    },
+    {
+      id: 3,
+      image: specification3,
+      description: "РАБОТАЕМ ПО ДОГОВОРУ",
+    },
+    {
+      id: 4,
+      image: specification4,
+      description: "БЕСПЛАТНЫЙ ВЫЕЗД МАСТЕРА",
+    },
+  ];
+
+
   // Возвращаем JSX - разметку нашего блока
   return (
     <section className="block1-section" id="about">
@@ -28,6 +56,23 @@ function Block1() {
           <source src="../videos/video.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
         </video>
+        <div className="company-features">
+          {specifications.map((feature, index) => (
+            <div
+              key={feature.id}
+              className="feature-item"
+            >
+              <div className="feature-content">
+                <div className="feature-image">
+                  <img src={feature.image} alt={feature.description} />
+                </div>
+                <div className="feature-text">
+                  <p>{feature.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
