@@ -8,6 +8,7 @@ import Block3 from './components/Block3'
 import Header from './components/Header';
 import BusinessCard from './components/Block7';
 import Footer from './components/Footer';
+import Block4 from './components/Block4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Block1 />
       <Block2 />
       <Block3 />
+      <Block4 />
       <BusinessCard />
     </main>
     <Footer />
