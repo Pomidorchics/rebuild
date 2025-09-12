@@ -193,14 +193,6 @@
     padding: 40px 15px;
   }
   
-  .chat-title {
-    font-size: 2rem;
-  }
-  
-  .telegram-chat {
-    max-width: 100%;
-  }
-  
   .message {
     max-width: 90%;
   }
