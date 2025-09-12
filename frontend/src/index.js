@@ -9,6 +9,7 @@ import Header from './components/Header';
 import BusinessCard from './components/Block7';
 import Footer from './components/Footer';
 import Block4 from './components/Block4';
+import Questions from './components/Block8';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
       <Block3 />
       <Block4 />
       <BusinessCard />
+      <Questions />
     </main>
     <Footer />
   </React.StrictMode>
