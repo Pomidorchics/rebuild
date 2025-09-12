@@ -144,19 +144,19 @@ function Block4() {
     setCurrentIndex((prevIndex) => 
       prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
     );
-    setActivePoint(null); // Сбрасываем активную точку при смене слайда
+    setActivePoint(null);
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1
     );
-    setActivePoint(null); // Сбрасываем активную точку при смене слайда
+    setActivePoint(null);
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
-    setActivePoint(null); // Сбрасываем активную точку при смене слайда
+    setActivePoint(null);
   };
 
   const handlePointClick = (point) => {
@@ -175,13 +175,13 @@ function Block4() {
 
       <div className="carousel-subheader">
         <button className="carousel-button carousel-button-prev" onClick={prevSlide}>
-          &#8249;
+          &#8592;
         </button>
 
         <h3 className="carousel-room-title">{currentRoom.title}</h3>
 
         <button className="carousel-button carousel-button-next" onClick={nextSlide}>
-          &#8250;
+          &#8594;
         </button>
       </div>
       
@@ -213,7 +213,6 @@ function Block4() {
                       <span className="hotspot-icon">+</span>
                     </button>
 
-                    {/* Линия и текст */}
                     <div className={`annotation annotation-${point.type} ${
                       activePoint === point.id ? 'active' : ''
                     }`}>
@@ -231,7 +230,6 @@ function Block4() {
         </div>
       </div>
 
-      {/* Индикаторы (точки) */}
       <div className="carousel-indicators">
         {carouselItems.map((_, index) => (
           <button
