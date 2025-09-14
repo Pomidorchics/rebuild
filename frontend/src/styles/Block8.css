@@ -1,7 +1,6 @@
 .chat-section {
   padding: 80px 20px;
   background: #132524;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +18,6 @@
   text-transform: uppercase;
 }
 
-/* Контейнер чата в стиле Telegram */
 .telegram-chat {
   width: 100%;
   max-width: 800px;
@@ -29,7 +27,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Шапка чата */
 .chat-header {
   display: flex;
   align-items: center;
@@ -187,13 +184,136 @@
   justify-content: center;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .chat-section {
     padding: 40px 15px;
   }
   
+  .chat-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .telegram-chat {
+    width: 85%;
+    background: white;
+  }
+
+  .avatar-placeholder img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .chat-name {
+    font-size: 16px;
+  }
+
+  .chat-status {
+    font-size: 13px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    min-height: 400px;
+    gap: 8px;
+  }
+
   .message {
-    max-width: 90%;
+    max-width: 80%;
+    padding: 10px 15px;
+  }
+
+  .message-content p {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .question-message:hover {
+    transform: translateY(0px);
+  }
+
+  .send-button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .chat-section {
+    padding: 20px 10px;
+  }
+
+  .chat-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .telegram-chat {
+    width: 80%;
+  }
+
+  .chat-header {
+    padding: 10px 20px;
+  }
+
+  .avatar-placeholder {
+    width: 30px;
+    height: 30px;
+  }
+
+  .avatar-placeholder img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .chat-name {
+    font-size: 12px;
+  }
+
+  .chat-status {
+    font-size: 10px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    min-height: 400px;
+    gap: 10px;
+  }
+
+  .message {
+    max-width: 80%;
+    padding: 10px 15px;
+  }
+
+  .message-content p {
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .message-time {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+
+  .message-status {
+    font-size: 9px;
+  }
+
+  .question-message:hover {
+    transform: translateY(0px);
+  }
+
+  .chat-input-container {
+    padding: 15px 20px;
+  }
+
+  .message-input {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .send-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }
