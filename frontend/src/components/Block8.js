@@ -3,7 +3,7 @@ import '../styles/Block8.css';
 import logo from "../assets/logo_header.png";
 
 function Questions() {
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [selectedQuestion, setSelectedQuestion] = useState(1);
 
   const questions = [
     {
@@ -30,9 +30,9 @@ function Questions() {
 
   const handleQuestionClick = (questionId) => {
     if (selectedQuestion === questionId) {
-      setSelectedQuestion(null); // закрыть ответ если кликнули повторно
+      setSelectedQuestion(null);
     } else {
-      setSelectedQuestion(questionId); // показать ответ
+      setSelectedQuestion(questionId);
     }
   };
 
@@ -41,7 +41,6 @@ function Questions() {
       <h2 className="chat-title">Часто задаваемые вопросы</h2>
       
       <div className="telegram-chat">
-        {/* Шапка чата как в Telegram */}
         <div className="chat-header">
           <div className="chat-avatar">
             <div className="avatar-placeholder">
@@ -58,7 +57,6 @@ function Questions() {
         </div>
 
         <div className="chat-messages">
-          {/* Сначала все вопросы */}
           {questions.map((item) => (
             <div key={item.id} className="message-container">
               <div 
@@ -74,7 +72,6 @@ function Questions() {
             </div>
           ))}
           
-          {/* Затем ответ на выбранный вопрос в конце чата */}
           {selectedQuestion && (
             <div className="message-container">
               <div className="message answer-message">
