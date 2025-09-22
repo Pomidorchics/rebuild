@@ -10,6 +10,7 @@ import BusinessCard from './components/Block7';
 import Footer from './components/Footer';
 import Block4 from './components/Block4';
 import Questions from './components/Block8';
+import Workers from './components/Block6';
 import Reviews from './components/Block5';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
       <Block2 />
       <Block3 />
       <Block4 />
+      <Workers />
       <Reviews />
       <BusinessCard />
       <Questions />
