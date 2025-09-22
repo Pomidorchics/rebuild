@@ -1,0 +1,319 @@
+.chat-section {
+  padding: 80px 20px;
+  background: #132524;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.chat-title {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.telegram-chat {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #FBCA38;
+}
+
+.chat-avatar {
+  margin-right: 12px;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.avatar-placeholder img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  color: #212529;
+  letter-spacing: 0.2em;
+}
+
+.chat-status {
+  font-size: 13px;
+  color: #000000;
+  margin: 0;
+}
+
+.chat-messages {
+  padding: 20px;
+  background: #000000;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.question-message {
+  align-self: flex-end;
+  background: #ffffff;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.question-message:hover {
+  transform: translateY(-2px);
+}
+
+.question-message.selected {
+  background: #FBCA38;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
+
+.answer-message {
+  align-self: flex-start;
+  background: #ffffff ;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.message-content {
+  position: relative;
+}
+
+.message-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #6c757d;
+  margin-top: 5px;
+  display: block;
+}
+
+.message-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 11px;
+  color: #000000;
+}
+
+.chat-input-container {
+  padding: 15px 20px;
+  background: #FBCA38;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: left;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.send-button {
+  background: #000000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .chat-section {
+    padding: 40px 15px;
+  }
+  
+  .chat-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .telegram-chat {
+    width: 85%;
+    background: white;
+  }
+
+  .avatar-placeholder img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .chat-name {
+    font-size: 16px;
+  }
+
+  .chat-status {
+    font-size: 13px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    min-height: 400px;
+    gap: 8px;
+  }
+
+  .message {
+    max-width: 80%;
+    padding: 10px 15px;
+  }
+
+  .message-content p {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .question-message:hover {
+    transform: translateY(0px);
+  }
+
+  .send-button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .chat-section {
+    padding: 20px 10px;
+  }
+
+  .chat-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .telegram-chat {
+    width: 80%;
+  }
+
+  .chat-header {
+    padding: 10px 20px;
+  }
+
+  .avatar-placeholder {
+    width: 30px;
+    height: 30px;
+  }
+
+  .avatar-placeholder img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .chat-name {
+    font-size: 12px;
+  }
+
+  .chat-status {
+    font-size: 10px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    min-height: 400px;
+    gap: 10px;
+  }
+
+  .message {
+    max-width: 80%;
+    padding: 10px 15px;
+  }
+
+  .message-content p {
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .message-time {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+
+  .message-status {
+    font-size: 9px;
+  }
+
+  .question-message:hover {
+    transform: translateY(0px);
+  }
+
+  .chat-input-container {
+    padding: 15px 20px;
+  }
+
+  .message-input {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .send-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
