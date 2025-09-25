@@ -171,51 +171,60 @@ function Block4() {
 
   return (
     <section className="carousel-section" id="overview">
-      <h2 className="carousel-main-title">Обзор квартиры</h2>
+      <h2 className="carousel-main-title">Пример готового проекта</h2>
 
       <div className="carousel-subheader">
-        <button className="carousel-button carousel-button-prev" onClick={prevSlide}>
+        <button
+          className="carousel-button carousel-button-prev"
+          onClick={prevSlide}
+        >
           &#8592;
         </button>
 
         <h3 className="carousel-room-title">{currentRoom.title}</h3>
 
-        <button className="carousel-button carousel-button-next" onClick={nextSlide}>
+        <button
+          className="carousel-button carousel-button-next"
+          onClick={nextSlide}
+        >
           &#8594;
         </button>
       </div>
-      
+
       <div className="carousel-container">
         <div className="carousel-track">
           {carouselItems.map((item, index) => (
             <div
               key={item.id}
-              className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
+              className={`carousel-slide ${
+                index === currentIndex ? "active" : ""
+              }`}
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               <div className="slide-content">
-                <img 
-                  src={item.image} 
+                <img
+                  src={item.image}
                   alt={item.title}
                   className="slide-image"
                 />
-                
+
                 {item.points.map((point) => (
                   <div key={point.id}>
                     <button
                       className={`hotspot hotspot-${point.type} ${
-                        activePoint === point.id ? 'active' : ''
+                        activePoint === point.id ? "active" : ""
                       }`}
-
                       onClick={() => handlePointClick(point)}
                       aria-label={point.title}
                     >
                       <span className="hotspot-icon">+</span>
                     </button>
 
-                    <div className={`annotation annotation-${point.type} ${
-                      activePoint === point.id ? 'active' : ''
-                    }`}>
+                    <div
+                      className={`annotation annotation-${point.type} ${
+                        activePoint === point.id ? "active" : ""
+                      }`}
+                    >
                       <div className="annotation-line"></div>
                       <div className="annotation-content">
                         <h4>{point.title}</h4>
@@ -234,7 +243,7 @@ function Block4() {
         {carouselItems.map((_, index) => (
           <button
             key={index}
-            className={`indicator ${index === currentIndex ? 'active' : ''}`}
+            className={`indicator ${index === currentIndex ? "active" : ""}`}
             onClick={() => goToSlide(index)}
             aria-label={`Перейти к ${roomTitles[index]}`}
           />

@@ -50,7 +50,7 @@ const Workers = () => {
   return (
     <section className="workers-section" id="workers">
       <div className="workers-container">
-        <h2 className="workers-title">О КОМПАНИИ</h2>
+        <h2 className="workers-title">Почему выбирают нас</h2>
         <div className="workers-grid">
           {WorkerItems.map((item) => (
             <div

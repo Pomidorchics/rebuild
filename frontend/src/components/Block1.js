@@ -36,12 +36,13 @@ function Block1() {
   return (
     <section className="block1-section" id="about">
       <div className="block1-content">
-        <h1 className="block1-title">REBUILD YOUR FUTURE</h1>
+        <h1 className="block1-title">Перестрой свое будущее</h1>
         <p className="block1-text">
-          текст для понятности что мы делаем <br />
-          текст для понятности что мы делаем
+          Качественный ремонт квартир и домов во Владивостоке и крае.
           <br />
-          текст для понятности что мы делаем
+          Превращаем ваши идеи в реальность с гарантией по договору.
+          <br />
+          Начните новую жизнь в обновленном пространстве.
         </p>
         <button className="block1-button">заказать</button>
         <p className="block1-greeting">Наше видеоприветствие</p>
@@ -58,10 +59,7 @@ function Block1() {
         </video>
         <div className="company-features">
           {specifications.map((feature, index) => (
-            <div
-              key={feature.id}
-              className="feature-item"
-            >
+            <div key={feature.id} className="feature-item">
               <div className="feature-content">
                 <div className="feature-image">
                   <img src={feature.image} alt={feature.description} />

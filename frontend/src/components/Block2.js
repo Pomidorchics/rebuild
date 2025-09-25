@@ -41,7 +41,7 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
-        <h2 className="portfolio-title">Портфолио</h2>
+        <h2 className="portfolio-title">Наше портфолио</h2>
         <div className="portfolio-grid">
           {PortfolioItems.map((item, index) => (
             <div
