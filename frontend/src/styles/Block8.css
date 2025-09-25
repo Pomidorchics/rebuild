@@ -114,6 +114,10 @@
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
 }
 
+.answer-message-container {
+  margin-top: 10px;
+}
+
 .answer-message {
   align-self: flex-start;
   background: #ffffff ;

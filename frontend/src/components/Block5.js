@@ -31,7 +31,7 @@ function Reviews() {
     {
       id: 2,
       type: "circle",
-      circle: "/videos/circle2.mp4"
+      circle: "/videos/circle1.mp4"
     },
     {
       id: 3,

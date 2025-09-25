@@ -8,23 +8,66 @@ function Questions() {
   const questions = [
     {
       id: 1,
-      question: "Как быстро готовы начать?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      question: "Как происходит расчет стоимости ремонта?",
+      answer: `Стоимость рассчитывается индивидуально, исходя из объемов работ, сложности планировки и выбранных материалов. После бесплатной консультации и выезда замерщика мы составляем подробную смету, где прописана стоимость всех работ. Цена, зафиксированная в договоре, не меняется в процессе ремонта.`
     },
     {
       id: 2,
-      question: "По какому графику работаете?",
-      answer: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+      question: "Вы даете гарантию на работы? На какой срок?",
+      answer: `Да, мы предоставляем официальную гарантию на все выполненные работы сроком до 3  лет. Все гарантийные обязательства прописываются в договоре. Если в течение этого времени проявятся какие-либо недостатки, мы бесплатно их устраним.`
     },
     {
       id: 3,
-      question: "Можно ли закупить материалы через вас?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      question: "Сколько по времени длится ремонт? От чего зависят сроки?",
+      answer: `Сроки зависят от типа ремонта и площади помещения:
+*   Косметический ремонт: 1-2 недели
+*   Капитальный ремонт: 1-2 месяца
+*   Комплексный ремонт "под ключ" в новостройке: 2-3 месяца
+Точные сроки мы фиксируем в договоре и строго их соблюдаем. На скорость работ влияет сложность черновых работ, скорость поставок материалов и согласование перепланировок.`
     },
     {
       id: 4,
-      question: "Как формируется цена?",
-      answer: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      question: "Можно ли закупить материалы самостоятельно?",
+      answer: `Да, вы можете закупить материалы сами. Однако мы рекомендуем доверить это нам, так как:
+*   Мы даем гарантию на материалы, приобретенные у наших проверенных поставщиков.
+*   Мы покупаем материалы по оптовым ценам, что часто выгоднее.
+*   Мы точно просчитаем необходимое количество и вовремя обеспечим объект, чтобы не было простоев.`
+    },
+    {
+      id: 5,
+      question: "Как происходит контроль качества? Кто будет следить за работами на объекте?",
+      answer: `На каждом объекте работает прораб, который ежедневно контролирует ход и качество работ. Кроме того, регулярный выездной контроль осуществляет технический руководитель. Вы всегда будете в курсе процесса: мы ведем фото- и видеоотчеты в WhatsApp или Telegram на всех ключевых этапах.`
+    },
+    {
+      id: 6,
+      question: "Нужен ли дизайн-проект и делаете ли вы его?",
+      answer: `Дизайн-проект не обязателен, но крайне рекомендован. Он помогает:
+*   Точно рассчитать бюджет и избежать перерасхода материалов.
+*   Увидеть будущий результат в 3D-визуализации.
+*   Избежать ошибок с расстановкой мебели, розеток и освещения.
+Да, мы оказываем услугу по разработке дизайн-проекта, который потом точно реализуем.`
+    },
+    {
+      id: 7,
+      question: "Какой порядок оплаты? Нужна ли предоплата?",
+      answer: `Мы работаем с прозрачной поэтапной системой оплаты. Оплата делится на 4-5 частей и привязывается к завершению ключевых этапов работ (демонтаж, черновые работы, чистовая отделка и т.д.). Предоплата требуется только на закупку материалов для первого этапа. Это комфортно и безопасно для обеих сторон.`
+    },
+    {
+      id: 8,
+      question: "Мы живем в квартире во время ремонта. Это возможно?",
+      answer: `Да, мы найдем решение. Однако для вашего же комфорта и для скорости работы мы рекомендуем по возможности освободить помещение на время черновых работ (они самые шумные и пыльные). На время чистовой отделки можно вернуться. Мы всегда зонируем пространство и используем пленку для защиты мебели, если вы остаетесь`
+    },
+    {
+      id: 9,
+      question: `Что входит в понятие "ремонт под ключ"?`,
+      answer: `"Под ключ" — это полный цикл работ, где мы берем на себя все задачи:
+*   Обсуждение и проектирование.
+*   Демонтаж и вывоз мусора.
+*   Все черновые и чистовые работы.
+*   Закупку и доставку материалов.
+*   Уборку помещения после ремонта.
+*   Сдачу объекта и гарантийное обслуживание.
+В итоге вы получаете ключи от квартиры, полностью готовой к проживанию.`
     }
   ];
 
@@ -58,30 +101,34 @@ function Questions() {
 
         <div className="chat-messages">
           {questions.map((item) => (
-            <div key={item.id} className="message-container">
-              <div 
-                className={`message question-message ${selectedQuestion === item.id ? 'selected' : ''}`}
-                onClick={() => handleQuestionClick(item.id)}
-              >
-                <div className="message-content">
-                  <p>{item.question}</p>
-                  <span className="message-time">12:30</span>
-                  <div className="message-status">✓✓</div>
+            <div key={item.id}>
+              <div className="message-container">
+                <div 
+                  className={`message question-message ${selectedQuestion === item.id ? 'selected' : ''}`}
+                  onClick={() => handleQuestionClick(item.id)}
+                >
+                  <div className="message-content">
+                    <p>{item.question}</p>
+                    <span className="message-time">12:30</span>
+                    <div className="message-status">✓✓</div>
+                  </div>
                 </div>
               </div>
+              
+              {selectedQuestion === item.id && (
+                <div className="message-container answer-message-container">
+                  <div className="message answer-message">
+                    <div className="message-content">
+                      <p style={{whiteSpace: 'pre-line'}}>
+                        {item.answer}
+                      </p>
+                      <span className="message-time">12:31</span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
-          
-          {selectedQuestion && (
-            <div className="message-container">
-              <div className="message answer-message">
-                <div className="message-content">
-                  <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
-                  <span className="message-time">12:31</span>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         <div className="chat-input-container">
